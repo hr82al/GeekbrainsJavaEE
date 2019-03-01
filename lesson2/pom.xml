@@ -5,11 +5,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>ru.geekbrains.java.ee</groupId>
-  <artifactId>lesson1</artifactId>
+  <artifactId>lesson2</artifactId>
   <version>1.0.0</version>
   <packaging>war</packaging>
 
-  <name>lesson1 Maven Webapp</name>
+  <name>lesson2 Maven Webapp</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
@@ -26,6 +26,22 @@
       <version>4.11</version>
       <scope>test</scope>
     </dependency>
+
+    <!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>javax.servlet-api</artifactId>
+      <version>4.0.1</version>
+      <scope>provided</scope>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-api</artifactId>
+      <version>1.7.26</version>
+      <scope>provided</scope>
+    </dependency>
   </dependencies>
 
   <build>
@@ -36,7 +52,7 @@
           </plugin>
       </plugins>
 
-    <finalName>lesson1</finalName>
+    <finalName>lesson2</finalName>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
       <plugins>
           <plugin>
