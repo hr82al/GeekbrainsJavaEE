@@ -67,7 +67,7 @@
 
   <filter>
     <filter-name>WebFilter</filter-name>
-    <filter-class>ru.geekbrains.lesson2.servlet.WebFilter</filter-class>
+    <filter-class>ru.geekbrains.lesson2.servlet.ContentTypeFilter</filter-class>
   </filter>
   <!-- Фильтр для всех запросов, приходящих в приложение -->
   <filter-mapping>
