@@ -7,6 +7,12 @@
     <groupId>ru.geekbrains.java.ee</groupId>
     <artifactId>GeekbrainsJavaEE</artifactId>
     <version>1.1.0</version>
+    <modules>
+        <module>lesson3</module>
+        <module>lesson2</module>
+        <module>lesson1</module>
+    </modules>
+    <packaging>pom</packaging>
 
     
 </project>
