@@ -23,7 +23,10 @@ public class CatalogServletJstl extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         logger.info("New GET request");
-        getServletContext().setAttribute("products", repository.getAll());
+        // помещаем список продуктов в аттрибут запроса
+        // это более правильно чем использовать тут аттрибут сервлета через getServletContext()
+        // или аттрибут сессии через getSession()
+        req.setAttribute("products", repository.getAll());
         getServletContext().getRequestDispatcher("/catalog-jstl.jsp").forward(req, resp);
     }
 }
