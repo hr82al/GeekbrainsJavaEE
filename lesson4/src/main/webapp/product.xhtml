@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+>
+<h:head>
+    <title>Продукты</title>
+</h:head>
+<h:body>
+    <ui:include src="menu.xhtml"/>
+    <h:form>
+        <p>
+            <h:outputLabel for="name-id">Product name:</h:outputLabel>
+            <h:inputText id="name-id" value="#{products.name}" required="true" requiredMessage="Нзавание продукта не может быть пустым"/>
+            <h:message for="name-id" class="error" />
+        </p>
+
+        <p>
+            <h:outputLabel for="price-id">Product name:</h:outputLabel>
+            <h:inputText id="price-id" value="#{products.price}" required="true" requiredMessage="Цена не может быть пустой"/>
+            <h:message for="price-id" class="error" />
+        </p>
+
+        <h:commandButton value="Save" action="#{products.saveProduct}"/>
+    </h:form>
+</h:body>
+</html>
