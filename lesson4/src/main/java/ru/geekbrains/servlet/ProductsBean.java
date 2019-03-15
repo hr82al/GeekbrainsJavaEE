@@ -54,7 +54,7 @@ public class ProductsBean {
 
     public String doDelete(Product product) {
         repository.delete(product);
-        logger.info("Удаление" + product.getName());
+        logger.info("Deleting {}", product.getName());
         return "/index.xhtml?faces-redirect=true";
     }
 

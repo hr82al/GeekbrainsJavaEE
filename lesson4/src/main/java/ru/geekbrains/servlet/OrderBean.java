@@ -27,13 +27,13 @@ public class OrderBean {
 
     public String doOrder(Product product) {
         cart.add(product);
-        logger.info("Зказан " + product.getName());
+        logger.info("Ordered {}", product.getName());
         return "/index.xhtml?faces-redirect=true";
     }
 
     public String doDelete(Product product) {
         cart.delete(product);
-        logger.info("Удалён " + product.getName());
+        logger.info("Deleted {}", product.getName());
         return "/orders.xhtml?faces-redirect=true";
     }
 }
