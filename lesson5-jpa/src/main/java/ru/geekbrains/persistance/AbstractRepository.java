@@ -51,15 +51,7 @@ public abstract class AbstractRepository<T extends EntityId> {
         }
         logger.info("Removing entity of class {} with id {}", entity.getClass().getSimpleName(), entity.getId());
         try {
-            EntityId attached;
-            if (entity instanceof Product) {
-                attached = entityManager.find(Product.class, entity.getId());
-            } else  if (entity instanceof Category) {
-                attached = entityManager.find(Category.class, entity.getId());
-            }
-            else {
-                attached = null;
-            }
+            T attached = getById(entity.getId());
             if (attached != null) {
                 entityManager.remove(attached);
             }
