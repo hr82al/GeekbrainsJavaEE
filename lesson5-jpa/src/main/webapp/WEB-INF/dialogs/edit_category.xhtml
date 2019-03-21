@@ -1,0 +1,27 @@
+<ui:composition
+        xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:f="http://xmlns.jcp.org/jsf/core"
+        xmlns:h="http://xmlns.jcp.org/jsf/html"
+        xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+        xmlns:p="http://primefaces.org/ui">
+
+    <p:dialog header="Category Info" widgetVar="categoryDialog" modal="true" showEffect="fade"
+              hideEffect="fade"
+              resizable="false">
+        <p:outputPanel id="categoryDetail" style="text-align:center;">
+            <p:panelGrid columns="2" rendered="#{not empty categories.category}"
+                         columnClasses="label,value">
+
+                <h:outputText value="Id:"/>
+                <h:outputText value="#{categories.category.id}"/>
+
+                <h:outputText value="Name"/>
+                <p:inputText value="#{categories.category.name}"/>
+            </p:panelGrid>
+
+            <p:commandButton update="@form" value="Save" style="margin-top: 7px"
+                             action="#{categories.saveCategory}"
+                             oncomplete="PF('categoryDialog').hide()" ajax="true"/>
+        </p:outputPanel>
+    </p:dialog>
+</ui:composition>
